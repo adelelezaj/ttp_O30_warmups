@@ -20,7 +20,6 @@ JOIN products as p ON p.product_id = od.product_id;
 -- multiply the unit_price column by the quanity column, then SUM over each order_id
 
 
-
 -- 3) Use the above query as a CTE, and use AVG, stddev_samp, and COUNT, to get the mean, standard deviation
 -- of the orders, and how many orders there are total.
 
