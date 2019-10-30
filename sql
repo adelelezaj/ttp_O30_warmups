@@ -19,22 +19,11 @@ JOIN products as p ON p.product_id = od.product_id;
 -- ALSO IMPORTANT: You have to do some math here. How do you get the order total? You'll have to 
 -- multiply the unit_price column by the quanity column, then SUM over each order_id
 
-SELECT SUM(p.unit_price*od.quantity)
-FROM orders as o
-JOIN order_details as od ON o.order_id = od.order_id
-JOIN products as p ON p.product_id = od.product_id
-GROUP BY o.order_id;
+
 
 -- 3) Use the above query as a CTE, and use AVG, stddev_samp, and COUNT, to get the mean, standard deviation
 -- of the orders, and how many orders there are total.
-WITH order_totals as (
-SELECT SUM(p.unit_price*od.quantity) as total
-FROM orders as o
-JOIN order_details as od ON o.order_id = od.order_id
-JOIN products as p ON p.product_id = od.product_id
-GROUP BY o.order_id)
-SELECT AVG(total), stddev_samp(total), COUNT(total)
-FROM order_totals;
+
 
 -- 4) The CEO of your company announced the other week that the company's long run average sales per order is 
 -- $1850! Do you believe him? Assuming the data in this database is only a subset of all the sales
