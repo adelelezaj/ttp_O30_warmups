@@ -81,5 +81,5 @@ FROM order_info;
 * 0.079 *
 -- WHat's your conclusion?
 *  Conclusion: Since p_value > significance level, we fail to reject the null Hypothesis 
-   and the claim of the boss seems to be true, because we don't have enough evidence to prove otherwise *-- 1) Download and install the northwind database - northwind.sql - from here (https://github.com/pthom/northwind_psql)
+   and the claim of the boss seems to be true, because we don't have enough evidence to prove otherwise *
 
